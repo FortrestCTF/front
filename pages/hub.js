@@ -4,20 +4,29 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 export default function Home() {
+  function Event_tc() {
+    var choice = document.getElementById("choicEvent");
+    var btn = document.getElementById("myBtn");
+
+    if(choice.style.display == 'none') {
+      btn.style.display = 'none'
+      choice.style.display = 'flex'
+    }
+  }
+  function Event_tc_close() {
+    var choice = document.getElementById("choicEvent");
+    var btn = document.getElementById("myBtn");
+
+    if(choice.style.display == 'flex') {
+      choice.style.display = 'none'
+      btn.style.display = 'block'
+    }
+  }
   return (
         <>
-        <style jsx>{`
-            .box {
-                margin: 0;
-                width: 90%;
-                height: 20px;
-                float: left;
-            }
-        `}
-        </style>
         <header style={{backgroundColor: 'white'}}>
           <div style={{ margin: '0% 1%', display: 'flex', flexDirection: 'row', paddingBottom: '2%', paddingTop: '1%'}} >
-          <Link href="/">
+          <Link href="/hub">
           <Image
             src="/fort-rouge.png"
             alt="logo"
@@ -29,15 +38,27 @@ export default function Home() {
           </div>
         </header>
         <body style={{backgroundColor: '#C4C4C4'}}>
-            <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%', display: 'flex', flexDirection: 'column', borderRadius: '5px'}}>
+            <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%'}}>
             </div>
-            <a style={{marginLeft: '50%'}}>
-            <Image
-            src="/plus.png"
-            alt="logo"
-            width={30}
-            height={30}
-          />
+            <div id="choicEvent"style={{backgroundColor: 'white', display: 'none' , flexDirection: 'row', justifyContent: 'space-around'}}> 
+              <Link href= "/add_event"> ADD EVENT </Link>
+              <a onClick={Event_tc_close}>
+                <Image
+                src="/moins.png"
+                alt="logo"
+                width={30}
+                height={30}
+                />
+              </a>
+              <Link href= "/join_event"> JOIN EVENT </Link>
+            </div>
+            <a id="myBtn" style={{marginLeft: '50%', display: 'block'}} onClick={Event_tc}>
+              <Image
+              src="/plus.png"
+              alt="logo"
+              width={30}
+              height={30}
+            />
           </a>
         </body>
         </>
