@@ -8,7 +8,7 @@ export default function Home() {
         <>
         <header style={{backgroundColor: 'white'}}>
           <div style={{ margin: '0% 1%', display: 'flex', flexDirection: 'row', paddingBottom: '2%', paddingTop: '1%'}} >
-          <Link href="/hub">
+          <Link href="/central">
           <Image
             src="/fort-rouge.png"
             alt="logo"
@@ -28,7 +28,7 @@ export default function Home() {
                 <input id="name" type="text" autocomplete="name" placeholder='ex: 26/07/2021' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none', marginBottom: '1%'}}/>
                 <label style={{paddingBottom: '1%'}} >fin:</label>
                 <input id="name" type="text" autocomplete="name" placeholder='ex : 28/07/2021' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none', marginBottom: '1%'}}/>
-                <Link href="/hub">
+                <Link href="/central">
                     <button type="submit" style={{marginTop: '1%', backgroundColor: '#D8EAAB', fontFamily: 'system-ui', borderRadius: '5px', border: 'none', padding: '1% 1%'}} >Ajouter</button>
                 </Link>
             </form>

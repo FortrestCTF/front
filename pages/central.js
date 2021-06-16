@@ -26,7 +26,7 @@ export default function Home() {
         <>
         <header style={{backgroundColor: 'white'}}>
           <div style={{ margin: '0% 1%', display: 'flex', flexDirection: 'row', paddingBottom: '2%', paddingTop: '1%'}} >
-          <Link href="/hub">
+          <Link href="/central">
           <Image
             src="/fort-rouge.png"
             alt="logo"
@@ -39,7 +39,15 @@ export default function Home() {
         </header>
         <body style={{backgroundColor: '#C4C4C4'}}>
             <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%'}}>
-            </div>
+              <Link href= "/detail_event"> 
+                  <div style={{backgroundColor: '#D8E8CF', margin: '1', padding: '1% 1% 1% 1%', display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
+                    <p>Admin</p>
+                    <p>CTF 2000</p>
+                    <p>15/30</p>
+                    <p>terminé</p>
+                  </div>
+              </Link>
+              </div>
             <div id="choicEvent"style={{backgroundColor: 'white', display: 'none' , flexDirection: 'row', justifyContent: 'space-around'}}> 
               <Link href= "/add_event"> ADD EVENT </Link>
               <a onClick={Event_tc_close}>
