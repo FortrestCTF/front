@@ -24,7 +24,7 @@ export default function Home() {
             <label style={{paddingBottom: '1%'}} >Login</label>
             <input id="name" type="text" autocomplete="name" placeholder='username' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none', marginBottom: '1%'}}/>
             <input id="name" type="password" autocomplete="name" placeholder='password' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none'}}/>
-            <Link href="/hub">
+            <Link href="/central">
                 <button type="submit" style={{marginTop: '1%', backgroundColor: '#D8EAAB', fontFamily: 'system-ui', borderRadius: '5px', border: 'none', padding: '1% 1%'}} >Connexion</button>
             </Link>
         </form>

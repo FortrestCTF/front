@@ -20,13 +20,22 @@ export default function Home() {
           </div>
         </header>
         <body style={{backgroundColor: '#C4C4C4'}}>
-            <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '10%'}}>
-                <label style={{paddingBottom: '1%'}} >Code</label>
-                <input id="name" type="text" autocomplete="name" placeholder='ex : 123456' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none', marginBottom: '1%'}}/>
+            <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%' ,display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', alignItems:'center'}}>
                 <Link href="/central">
-                    <button type="submit" style={{marginTop: '1%', backgroundColor: '#D8EAAB', fontFamily: 'system-ui', borderRadius: '5px', border: 'none', padding: '1% 1%'}} >Rejoindre</button>
+                    <Image
+                    src="/login.png"
+                    alt="logo"
+                    width={70}
+                    height={70}
+                    />
                 </Link>
-            </form>
+                <div>CTF 2000</div>
+                <div>25/12/2020</div>
+                <div>27/12/2020</div>
+                <div>Information : antoine 3/30 120pts</div>
+                <Link href="/classement">Classement</Link>
+                <Link href="/flageux">Flag</Link>
+            </div>
         </body>
         </>
       )
