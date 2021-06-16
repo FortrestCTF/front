@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f0d0b4;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    padding: 18.5px;
+}
+
+.logo .logoimg{
+    background-color: wheat;
+    border-radius: 197.5px;
+    cursor: pointer;
+}
+
+.slogan {
+    font-size: 30px;
+    color: black;
+    padding: 30px;
+    font-weight: bold;
+}
+
+.navbaritems li {
+    display: inline-block;
+    padding: 28.5px;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.navbaritems li:hover {
+    color: grey;
+    transition: 0.8s;
+    cursor: pointer;
+}
