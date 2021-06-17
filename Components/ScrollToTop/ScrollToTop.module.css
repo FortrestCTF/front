@@ -1,0 +1,20 @@
+#go_up
+{
+    position: fixed;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: black;
+    bottom: 20px;
+    left: 30px;
+}
+
+#go_up button
+{
+    background-color: wheat;
+    color: white;
+    border-radius: 10%;
+    border-color: wheat;
+    width: 1.8em;
+    height: 1.8em;
+}
