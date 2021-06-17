@@ -21,7 +21,7 @@ export default function Home() {
         </header>
         <body style={{backgroundColor: '#C4C4C4'}}>
             <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%' ,display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', alignItems:'center'}}>
-                <Link href="/detail_event">
+            <Link href="/flageux">
                     <Image
                     src="/login.png"
                     alt="logo"
@@ -29,13 +29,6 @@ export default function Home() {
                     height={70}
                     />
                 </Link>
-                <div style={{ fontSize: '40px'}}>CLASSEMENT</div>
-                  <Image
-                    src="/trophee.png"
-                    alt="logo"
-                    width={70}
-                    height={70}
-                  />
             </div>
         </body>
         </>

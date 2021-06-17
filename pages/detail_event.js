@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { disconnect } from 'process'
 
 export default function Home() {
     return (
@@ -19,8 +20,8 @@ export default function Home() {
           <p style={{margin: '1% 5% ', fontFamily: 'system-ui', fontSize: '30px' }}>Fortrest</p>
           </div>
         </header>
-        <body style={{backgroundColor: '#C4C4C4'}}>
-            <div style={{backgroundColor: 'white', margin: '2% 3% 3% 3%', padding: '1% 1% 30% 1%' ,display: 'flex', flexDirection: 'row', justifyContent: 'space-between', flexWrap: 'wrap', alignItems:'center'}}>
+        <body style={{backgroundColor: 'white'}}>
+            <div style={{backgroundColor: 'white', margin: '10px 10px 10px 10px', padding: '10px 10px 10px 10px' ,display: 'flex', flexDirection: 'row', justifyContent: 'space-between'}}>
                 <Link href="/central">
                     <Image
                     src="/login.png"
@@ -31,10 +32,19 @@ export default function Home() {
                 </Link>
                 <div>CTF 2000</div>
                 <div>25/12/2020</div>
-                <div>27/12/2020</div>
-                <div>Information : antoine 3/30 120pts</div>
-                <Link href="/classement">Classement</Link>
-                <Link href="/flageux">Flag</Link>
+                <div>27/12/2020</div> 
+            </div>
+            <div style={{backgroundColor: 'white', display: 'flex', justifyContent: 'space-around'}}>
+                  <div>Information :</div>
+                <div style={{display: 'flex', flexDirection:'column'}}>
+                  <div>antoine</div> 
+                  <div>3/30</div>
+                  <div>120pts</div>
+                </div>
+                <div style={{display: 'flex', flexDirection:'column'}}>
+                  <Link href="/classement">Classement</Link>
+                  <Link href="/flageux">Flag</Link>
+                </div>
             </div>
         </body>
         </>
