@@ -1,5 +1,6 @@
 import styles from '../styles/sign_in.module.css'
 import Header from '../Components/Header/Header'
+import withAuth from '../Components/withAuth/withAuth'
 import Router from 'next/router'
 
 function Sign_In() {
@@ -14,12 +15,12 @@ function Sign_In() {
 		await fetch(
 			'http://localhost:4000/auth/login', {
 			method: "POST",
-			headers: {
-                'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8'
-            },
-			body: new URLSearchParams(form)
+			headers: {'Content-Type': 'application/json'},
+			credentials: 'include',
+			body: JSON.stringify(form)
 		})
 		.then( async (res) => {
+			console.log(res);
 			if (res.status === 201) {
 				document.getElementById('spinner').hidden = true;
 				document.getElementById('correct').hidden = false;
@@ -67,4 +68,4 @@ function Sign_In() {
 	)
 }
 
-export default Sign_In
+export default withAuth(Sign_In, {pathafterFailure: '/', authorized: ["non-login"]});

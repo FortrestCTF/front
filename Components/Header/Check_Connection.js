@@ -2,9 +2,9 @@ import NavItem from './NavItem'
 import styles from './Header.module.css'
 
 export default function Check_Connection(fake_connected) {
-    var NOT_LOGIN = 0;
-    var USER = 1;
-    var ADMIN = 2;
+    var NOT_LOGIN = "non-login";
+    var USER = "login";
+    var ADMIN = "admin";
     if (fake_connected === NOT_LOGIN)
         return (<ul className={styles.navbaritems}>
                     <NavItem href="/">Home</NavItem>
