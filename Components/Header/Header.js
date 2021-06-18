@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from './Header.module.css'
 import Check_Connection from './Check_Connection'
-import React, { useState } from 'react'
+import React from 'react'
 
 const Authorized = (value) => {
-    var user = "";
+    var user = "non-login";
 
     if (value.token === "incorrect")
         user = "non-login"
@@ -22,7 +22,8 @@ class Header extends React.Component {
 	{
 		super(props);
 		this.state = {
-			user: "non-login"
+			user: "",
+			value: {}
 		}
 	};
 
@@ -37,11 +38,14 @@ class Header extends React.Component {
         .then((res) => {
             const json = res.json();
             json.then((value) => {
+				console.log(value);
                 const user = Authorized(value);
-				console.log(user);
-				this.setState({user: user});
+				this.setState({user: user, value: value});
             })
         })
+		.catch((err) => {
+			this.setState({user: "non-login"});
+		})
 	}
 	render() {
 		return (
@@ -55,7 +59,7 @@ class Header extends React.Component {
 						</Link>
 						<Image src="/titre.png" alt="slogan" width={400} height={100}/>
 					</div>
-					{Check_Connection(this.state.user)}
+					{Check_Connection(this.state.user, this.state.value)}
 				</nav>
 			</header>
 		);

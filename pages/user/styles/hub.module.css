@@ -1,0 +1,84 @@
+.main_section
+{
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(53, 53, 53);
+    margin-bottom: 4em;
+}
+
+.h1
+{
+    color: white;
+}
+
+.container
+{
+    border: 4px solid black;
+    margin: 0px 100px 100px 100px;
+    border-radius: 1.8%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(53, 53, 53);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.full_background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../../public/hubeventbackground.jpg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: cover;
+    z-index: -1;
+    top: 0;
+    opacity: 0.2;
+}
+
+.buttonjoin
+{
+    align-self: flex-start;
+    margin: 1em 0 1em 3em;
+}
+
+.ul 
+{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 0;
+    padding: 2em 2em 2em 2em;
+    margin: 0;
+}
+
+.infosul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.image
+{
+    border-radius: 50%;
+    background-color: white;
+}
+
+.li
+{
+    margin: 2em;
+    border: 1px solid black;
+    background-color: #E9CDCD;
+}
+
+.whole_page
+{
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+}

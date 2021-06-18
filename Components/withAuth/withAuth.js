@@ -31,6 +31,7 @@ const withAuth = (Component = null, options = {}) => {
   class withAuth extends React.Component {
     state = {
       loading: true,
+      value: {}
     };
     
     componentDidMount() {
@@ -46,7 +47,7 @@ const withAuth = (Component = null, options = {}) => {
                 const vret = Authorized(options.authorized, value);
                 console.log(vret);
                 if (vret)
-                    this.setState({loading: false});
+                    this.setState({loading: false, value: value});
                 else
                     Router.push(options.pathAfterFailure || "/");
             })
@@ -59,8 +60,7 @@ const withAuth = (Component = null, options = {}) => {
       if (loading) {
         return <div />;
       }
-
-      return <Component {...this.props} />;
+      return <Component {...this.props} withAuth={this.state.value}/>;
     }
   }
 

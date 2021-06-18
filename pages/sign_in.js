@@ -50,14 +50,14 @@ function Sign_In() {
   	return (
         <>
         <Header />
-        <div style={{backgroundColor: '#C4C4C4'}}>
+        <div style={{backgroundColor: '#C4C4C4', position: 'fixed', width: '100%', height: '100%'}}>
 			<form onSubmit={onClickLogin} onChange={onChangeLogin} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '10%'}}>
-				<label style={{paddingBottom: '1%', fontSize: '2.8vw'}} >Login</label>
+				<label style={{paddingBottom: '1%', fontSize: '2.8vw'}} >Sign in</label>
 				<input id="input_id" type="text" autoComplete="name" placeholder='username' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none', marginBottom: '1%'}}/>
 				<input id="input_pass" type="password" autoComplete="name" placeholder='password' required style={{padding: '1% 2%', borderRadius: '5px', border: 'none'}}/>
-				<button id="input_button" type="submit" disabled={true} style={{marginTop: '1%', backgroundColor: '#D8EAAB', fontFamily: 'system-ui', borderRadius: '5px', border: 'none', padding: '1% 1%'}} >Login</button>
+				<button id="input_button" type="submit" disabled={true} style={{fontWeight: 'bolder', marginTop: '1%', backgroundColor: '#b27946', fontFamily: 'system-ui', borderRadius: '5px', border: 'none', padding: '1% 1%'}} >Login</button>
 				<span id="incorrect" hidden={true} style={{color: 'red'}}>Login or password incorrect</span>
-				<span id="correct" hidden={true} style={{color: 'green'}}>Connected !</span>
+				<span id="correct" hidden={true} style={{color: 'green', fontWeight: 'bolder'}}>Connected !</span>
 				<div id="spinner" className={styles.spinner} hidden={true}>
 					<div className={styles.double_bounce1}></div>
 					<div className={styles.double_bounce2}></div>
