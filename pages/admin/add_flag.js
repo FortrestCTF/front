@@ -1,23 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 
-export default function Home() {
+import Link from 'next/link'
+import Header from '../../Components/Header/Header'
+
+export default function Add_flag() {
     return (
         <>
-        <header style={{backgroundColor: 'white'}}>
-          <div style={{ margin: '0% 1%', display: 'flex', flexDirection: 'row', paddingBottom: '2%', paddingTop: '1%'}} >
-          <Link href="/central">
-          <Image
-            src="/fort-rouge.png"
-            alt="logo"
-            width={70}
-            height={70}
-          />
-          </Link>
-          <p style={{margin: '1% 5% ', fontFamily: 'system-ui', fontSize: '30px' }}>Fortrest</p>
-          </div>
-        </header>
+        <Header />
         <body style={{backgroundColor: 'grey'}}>
             <div style={{backgroundColor: 'white', margin: '0% 3% 3% 3%', padding: '1% 1% 12% 1%' ,display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems:'center'}}>
                 <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', width: '50%'}}>

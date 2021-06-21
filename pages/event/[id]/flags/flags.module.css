@@ -1,0 +1,23 @@
+.container
+{
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 10%;
+    background-color: whitesmoke;
+}
+
+.maincontainer
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.h2
+{
+    text-align: center;
+}

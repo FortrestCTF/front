@@ -24,7 +24,7 @@ export default function Check_Connection(fake_connected, value) {
         return (<ul className={styles.navbaritems}>
                     <NavItem href="/admin/profil"><img className={styles.image_profil} src="/profil.png"/>{value.username}</NavItem>
                     <NavItem href="/">Home</NavItem>
-                    <NavItem href="/add_event">Manage Events</NavItem>
+                    <NavItem href="/admin/add_event">Manage Events</NavItem>
                     <NavItem href="/logout">Logout</NavItem>
                 </ul>
         );

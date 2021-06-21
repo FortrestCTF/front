@@ -35,12 +35,8 @@ class EventHub extends React.Component
                     <h1 style={{textAlign: 'center', paddingTop: '1.8em', color: 'white'}}><b>Your Events</b></h1>
                     <button onClick={this.onClickPopup} className={styles.buttonjoin}>Join a new event</button>
                     <ul className={styles.ul}>
-                        <EventItem/>
-                        <EventItem/>
-                        <EventItem/>
-                        <EventItem/>
-                        <EventItem/>
-                        <EventItem/>
+                        <EventItem id={1}/>
+                        <EventItem id = {2}/>
                     </ul>
                 </section>
             </main>

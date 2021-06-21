@@ -1,0 +1,9 @@
+.tr {
+    height: 3em;
+}
+
+.td {
+    border: black solid 2px;
+    width: 40em;
+    text-align: center;
+}

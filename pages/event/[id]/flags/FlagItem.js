@@ -1,4 +1,6 @@
 import React from 'react'
+import styles from './flags.module.css'
+import PopUpFlag from '../../Components/Popupflag'
 
 class FlagItem extends React.Component
 {
@@ -8,6 +10,8 @@ class FlagItem extends React.Component
         this.state = {
             Popup: false
         };
+
+        this.onClickSolve = this.onClickSolve.bind(this);
     }
     onClickSolve()
     {
@@ -16,11 +20,13 @@ class FlagItem extends React.Component
     render() {
         console.log(this.props);
         return (
-            <div>
+            <div className={styles.container}>
                 <h1>{this.props.name}</h1>
-                <h2>{this.props.value}</h2>
-                {this.props.done ? <h3>Done</h3> : null}
-                <button>Solve</button>
+                <br className={styles.br}/>
+                <h2 className={styles.h2}>{this.props.value} Points</h2>
+                {this.props.done ? <span>Done</span> : null}
+                <button onClick={this.onClickSolve} disabled={this.props.done}>Solve</button>
+                {this.state.Popup ? <PopUpFlag h1={this.props.name} h2={"Description"} url={this.props.url} flag={this.props.flag} closePopup={this.onClickSolve}/> : null}
             </div>
         )
     }

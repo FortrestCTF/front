@@ -1,23 +1,11 @@
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Header from '../../Components/Header/Header'
 
-export default function Home() {
+export default function Add_event() {
     return (
         <>
-        <header style={{backgroundColor: 'white'}}>
-          <div style={{ margin: '0% 1%', display: 'flex', flexDirection: 'row', paddingBottom: '2%', paddingTop: '1%'}} >
-          <Link href="/central">
-          <Image
-            src="/fort-rouge.png"
-            alt="logo"
-            width={70}
-            height={70}
-          />
-          </Link>
-          <p style={{margin: '1% 5% ', fontFamily: 'system-ui', fontSize: '30px' }}>Fortrest</p>
-          </div>
-        </header>
+		<Header />
         <body style={{backgroundColor: '#C4C4C4'}}>
             <div>
             <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%'}}>

@@ -10,7 +10,6 @@
 
 .image_profil
 {
-    padding-bottom: 8px;
     padding-right: 8px;
     color: red;
     display: inline-block;
@@ -47,9 +46,4 @@
     color: grey;
     transition: 0.8s;
     cursor: pointer;
-}
-
-.joinbutton
-{
-    
 }
