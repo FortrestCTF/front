@@ -1,12 +1,14 @@
 
 import Link from 'next/link'
 import Header from '../../Components/Header/Header'
+import SubAdminNavbar from '../../Components/SubAdminNavbar/SubAdminNavbar'
 
 export default function Add_flag() {
     return (
         <>
         <Header />
-        <body style={{backgroundColor: 'grey'}}>
+        <SubAdminNavbar />
+        <div style={{backgroundColor: 'grey', zIndex: '-1'}}>
             <div style={{backgroundColor: 'white', margin: '0% 3% 3% 3%', padding: '1% 1% 12% 1%' ,display: 'flex', flexDirection: 'column', justifyContent: 'space-around', alignItems:'center'}}>
                 <form  style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '5%', width: '50%'}}>
                 <label style={{paddingBottom: '1%', fontSize: '50px'}} >Flag</label>
@@ -20,7 +22,7 @@ export default function Add_flag() {
                 </Link>
                 </form>
             </div>
-        </body>
+        </div>
         </>
       )
     }
