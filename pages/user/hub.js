@@ -13,11 +13,40 @@ class EventHub extends React.Component
     {
         super(props);
         this.state = {
-            popup: false
+            popup: false,
+            events: undefined
         }
     }
     onClickPopup = (e) => {
         this.setState({popup: !this.state.popup});
+    }
+
+    async componentDidMount()
+    {
+        await fetch(
+			'http://localhost:4000/users/event/', {
+			method: "GET",
+			headers: {'Content-Type': 'application/json'},
+			credentials: 'include',
+		})
+		.then( async (res) => {
+            const json = res.json();
+            json.then((value) => {
+                this.setState({events: value});
+            })
+		})
+		.catch((err) => {
+			console.log('ERROR: ' + err.status);
+		})    
+    }
+
+    EventDisplay()
+    {
+        var elem = this.state.events;
+        console.log(elem);
+        if (elem.status === 400)
+            return (null);
+        return elem.map((elem) => <EventItem key={elem.id} id={elem.id} name={elem.title} number={elem.participants} status={!elem.status} />);
     }
 
     render() {
@@ -35,8 +64,9 @@ class EventHub extends React.Component
                     <h1 style={{textAlign: 'center', paddingTop: '1.8em', color: 'white'}}><b>Your Events</b></h1>
                     <button onClick={this.onClickPopup} className={styles.buttonjoin}>Join a new event</button>
                     <ul className={styles.ul}>
-                        <EventItem id={1}/>
-                        <EventItem id = {2}/>
+                        {/* <EventItem id={1} name={"The best CTF"} number={"20/30"} status={true}/>
+                        <EventItem id={2} name={"CTF.io"} number={"20/30"} status={false}/> */}
+                        {this.state.events === undefined ? null : this.EventDisplay()}
                     </ul>
                 </section>
             </main>

@@ -17,13 +17,13 @@ class EventItemAdmin extends React.Component
                         {this.props.name}
                     </li>
                     <li>
-                        {this.props.number}
+                        {this.props.number}/30
                     </li>
                     <li>
-                        {this.props.status}
+                        {this.props.status ? "Done" : "In progress"}
                     </li>
                     <li>
-                        <Link href={"/admin/add_flag"}><button className={styles.joinbutton}>Manage</button></Link>
+                        <Link href={"/admin/" + this.props.id}><button className={styles.joinbutton} disabled={this.props.status}>Manage</button></Link>
                     </li>
                 </ul>
             </li>

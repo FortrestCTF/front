@@ -22,8 +22,10 @@ class PopUpFlag extends React.Component
     }
 
     Send(e) {
-        if (this.props.flag === this.state.input_value)
+        if (this.props.flag === this.state.input_value) {
             this.setState({valid: true});
+            this.props.goodTry();
+        }
         else
             this.setState({valid: false});
     }
@@ -38,7 +40,7 @@ class PopUpFlag extends React.Component
                             <h1 className={styles.h1}>{this.props.h1}</h1>
                             <h2 className={styles.h2}>{this.props.h2}</h2>
                         </div>
-                        <a>{this.props.url}</a>
+                        <a href={this.props.url} target="_blank">{this.props.url}</a>
                         <div className={styles.divinput}>
                             <input className={styles.input} type='text' onChange={this.EventName} placeholder="Input the flag here..."></input>
                         </div>

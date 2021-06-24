@@ -14,16 +14,16 @@ class EventItem extends React.Component
                         <Image src="/knight.png" width={80} height={80}/>
                     </li>
                     <li className={styles.infosli}>
-                        NAME OF THE CAPTURE THE FLAG
+                        {this.props.name}
                     </li>
                     <li>
-                        ??/??
+                        {this.props.number}
                     </li>
                     <li>
-                        STATUS
+                        {this.props.status ? "In progress" : "Done"}
                     </li>
                     <li>
-                        <Link href={"/event/" + this.props.id + "/hub"}><button className={styles.joinbutton}>GO</button></Link>
+                        <Link href={"/event/" + this.props.id + "/hub"}><button className={styles.joinbutton} disabled={!this.props.status}>GO</button></Link>
                     </li>
                 </ul>
             </li>
